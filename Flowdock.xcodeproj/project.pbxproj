@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BFA8F611AC79C3900F1EFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8F601AC79C3900F1EFE3 /* AppDelegate.swift */; };
+		6BFA8F631AC79C3900F1EFE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8F621AC79C3900F1EFE3 /* ViewController.swift */; };
+		6BFA8F651AC79C3900F1EFE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BFA8F641AC79C3900F1EFE3 /* Images.xcassets */; };
+		6BFA8F681AC79C3900F1EFE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFA8F661AC79C3900F1EFE3 /* Main.storyboard */; };
+		6BFA8F741AC79C3900F1EFE3 /* FlowdockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8F731AC79C3900F1EFE3 /* FlowdockTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BFA8F6E1AC79C3900F1EFE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BFA8F531AC79C3900F1EFE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BFA8F5A1AC79C3900F1EFE3;
+			remoteInfo = Flowdock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6BFA8F5B1AC79C3900F1EFE3 /* Flowdock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowdock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BFA8F5F1AC79C3900F1EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BFA8F601AC79C3900F1EFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6BFA8F621AC79C3900F1EFE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BFA8F641AC79C3900F1EFE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6BFA8F671AC79C3900F1EFE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BFA8F6D1AC79C3900F1EFE3 /* FlowdockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowdockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BFA8F721AC79C3900F1EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BFA8F731AC79C3900F1EFE3 /* FlowdockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowdockTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BFA8F581AC79C3900F1EFE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFA8F6A1AC79C3900F1EFE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BFA8F521AC79C3900F1EFE3 = {
+			isa = PBXGroup;
+			children = (
+				6BFA8F5D1AC79C3900F1EFE3 /* Flowdock */,
+				6BFA8F701AC79C3900F1EFE3 /* FlowdockTests */,
+				6BFA8F5C1AC79C3900F1EFE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BFA8F5C1AC79C3900F1EFE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA8F5B1AC79C3900F1EFE3 /* Flowdock.app */,
+				6BFA8F6D1AC79C3900F1EFE3 /* FlowdockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BFA8F5D1AC79C3900F1EFE3 /* Flowdock */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA8F601AC79C3900F1EFE3 /* AppDelegate.swift */,
+				6BFA8F621AC79C3900F1EFE3 /* ViewController.swift */,
+				6BFA8F641AC79C3900F1EFE3 /* Images.xcassets */,
+				6BFA8F661AC79C3900F1EFE3 /* Main.storyboard */,
+				6BFA8F5E1AC79C3900F1EFE3 /* Supporting Files */,
+			);
+			path = Flowdock;
+			sourceTree = "<group>";
+		};
+		6BFA8F5E1AC79C3900F1EFE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA8F5F1AC79C3900F1EFE3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BFA8F701AC79C3900F1EFE3 /* FlowdockTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA8F731AC79C3900F1EFE3 /* FlowdockTests.swift */,
+				6BFA8F711AC79C3900F1EFE3 /* Supporting Files */,
+			);
+			path = FlowdockTests;
+			sourceTree = "<group>";
+		};
+		6BFA8F711AC79C3900F1EFE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA8F721AC79C3900F1EFE3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BFA8F5A1AC79C3900F1EFE3 /* Flowdock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BFA8F771AC79C3900F1EFE3 /* Build configuration list for PBXNativeTarget "Flowdock" */;
+			buildPhases = (
+				6BFA8F571AC79C3900F1EFE3 /* Sources */,
+				6BFA8F581AC79C3900F1EFE3 /* Frameworks */,
+				6BFA8F591AC79C3900F1EFE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flowdock;
+			productName = Flowdock;
+			productReference = 6BFA8F5B1AC79C3900F1EFE3 /* Flowdock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BFA8F6C1AC79C3900F1EFE3 /* FlowdockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BFA8F7A1AC79C3900F1EFE3 /* Build configuration list for PBXNativeTarget "FlowdockTests" */;
+			buildPhases = (
+				6BFA8F691AC79C3900F1EFE3 /* Sources */,
+				6BFA8F6A1AC79C3900F1EFE3 /* Frameworks */,
+				6BFA8F6B1AC79C3900F1EFE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BFA8F6F1AC79C3900F1EFE3 /* PBXTargetDependency */,
+			);
+			name = FlowdockTests;
+			productName = FlowdockTests;
+			productReference = 6BFA8F6D1AC79C3900F1EFE3 /* FlowdockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BFA8F531AC79C3900F1EFE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Phillip Hutchings";
+				TargetAttributes = {
+					6BFA8F5A1AC79C3900F1EFE3 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					6BFA8F6C1AC79C3900F1EFE3 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 6BFA8F5A1AC79C3900F1EFE3;
+					};
+				};
+			};
+			buildConfigurationList = 6BFA8F561AC79C3900F1EFE3 /* Build configuration list for PBXProject "Flowdock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BFA8F521AC79C3900F1EFE3;
+			productRefGroup = 6BFA8F5C1AC79C3900F1EFE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BFA8F5A1AC79C3900F1EFE3 /* Flowdock */,
+				6BFA8F6C1AC79C3900F1EFE3 /* FlowdockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BFA8F591AC79C3900F1EFE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFA8F651AC79C3900F1EFE3 /* Images.xcassets in Resources */,
+				6BFA8F681AC79C3900F1EFE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFA8F6B1AC79C3900F1EFE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BFA8F571AC79C3900F1EFE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFA8F631AC79C3900F1EFE3 /* ViewController.swift in Sources */,
+				6BFA8F611AC79C3900F1EFE3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFA8F691AC79C3900F1EFE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFA8F741AC79C3900F1EFE3 /* FlowdockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BFA8F6F1AC79C3900F1EFE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BFA8F5A1AC79C3900F1EFE3 /* Flowdock */;
+			targetProxy = 6BFA8F6E1AC79C3900F1EFE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BFA8F661AC79C3900F1EFE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BFA8F671AC79C3900F1EFE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BFA8F751AC79C3900F1EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6BFA8F761AC79C3900F1EFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6BFA8F781AC79C3900F1EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Flowdock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6BFA8F791AC79C3900F1EFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Flowdock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6BFA8F7B1AC79C3900F1EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlowdockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flowdock.app/Contents/MacOS/Flowdock";
+			};
+			name = Debug;
+		};
+		6BFA8F7C1AC79C3900F1EFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlowdockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flowdock.app/Contents/MacOS/Flowdock";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BFA8F561AC79C3900F1EFE3 /* Build configuration list for PBXProject "Flowdock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BFA8F751AC79C3900F1EFE3 /* Debug */,
+				6BFA8F761AC79C3900F1EFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BFA8F771AC79C3900F1EFE3 /* Build configuration list for PBXNativeTarget "Flowdock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BFA8F781AC79C3900F1EFE3 /* Debug */,
+				6BFA8F791AC79C3900F1EFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6BFA8F7A1AC79C3900F1EFE3 /* Build configuration list for PBXNativeTarget "FlowdockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BFA8F7B1AC79C3900F1EFE3 /* Debug */,
+				6BFA8F7C1AC79C3900F1EFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BFA8F531AC79C3900F1EFE3 /* Project object */;
+}
