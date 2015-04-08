@@ -7,14 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6BFA8F611AC79C3900F1EFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8F601AC79C3900F1EFE3 /* AppDelegate.swift */; };
-		6BFA8F631AC79C3900F1EFE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8F621AC79C3900F1EFE3 /* ViewController.swift */; };
+		6B322EAB1ACDDAFC00C47E32 /* Flowdock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B322EAA1ACDDAFC00C47E32 /* Flowdock.swift */; };
+		6B7B7BA11ACFC83600D03B17 /* FlowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B7BA01ACFC83600D03B17 /* FlowsViewController.swift */; };
+		6B7B7BA31ACFC8C400D03B17 /* FlowsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B7BA21ACFC8C400D03B17 /* FlowsView.xib */; };
+		6B7B7BA51ACFCA0100D03B17 /* MainWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B7BA41ACFCA0100D03B17 /* MainWindowViewController.swift */; };
+		6B85C4E41AC7B6A4000D8C04 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B85C4E31AC7B6A4000D8C04 /* MainMenu.xib */; };
+		6BA754011AD4E830004288A8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA754001AD4E830004288A8 /* Notifications.swift */; };
+		6BA754051AD51392004288A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA754041AD51392004288A8 /* Extensions.swift */; };
+		6BD7F00B1AC7ABA40046DB6F /* OAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD7F0041AC7AB8C0046DB6F /* OAuth2.framework */; };
+		6BD7F00C1AC7ABB50046DB6F /* OAuth2.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD7F0041AC7AB8C0046DB6F /* OAuth2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6BD7F00E1AC7AD7A0046DB6F /* OAuth.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD7F00D1AC7AD7A0046DB6F /* OAuth.xib */; };
+		6BD7F0101AC7ADBD0046DB6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD7F00F1AC7ADBD0046DB6F /* AppDelegate.swift */; };
+		6BEA41EC1AD24527002A317B /* FlowdockAuthorisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA41EB1AD24527002A317B /* FlowdockAuthorisation.swift */; };
+		6BEA41EE1AD24553002A317B /* FlowdockTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA41ED1AD24553002A317B /* FlowdockTypes.swift */; };
+		6BEA41F01AD24572002A317B /* JsonConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA41EF1AD24572002A317B /* JsonConnectionDelegate.swift */; };
+		6BF17FE11AC7D2620093C1BD /* OAuthWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF17FE01AC7D2620093C1BD /* OAuthWindowController.swift */; };
+		6BF17FE51AC7E5CE0093C1BD /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF17FE41AC7E5CE0093C1BD /* Dispatcher.swift */; };
 		6BFA8F651AC79C3900F1EFE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BFA8F641AC79C3900F1EFE3 /* Images.xcassets */; };
-		6BFA8F681AC79C3900F1EFE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFA8F661AC79C3900F1EFE3 /* Main.storyboard */; };
 		6BFA8F741AC79C3900F1EFE3 /* FlowdockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8F731AC79C3900F1EFE3 /* FlowdockTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6BD7F0031AC7AB8C0046DB6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD7EFFD1AC7AB8C0046DB6F /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209471942772800736F1A;
+			remoteInfo = OAuth2;
+		};
+		6BD7F0051AC7AB8C0046DB6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD7EFFD1AC7AB8C0046DB6F /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEDB8624193FAAE500C4EEA1;
+			remoteInfo = OAuth2iOS;
+		};
+		6BD7F0071AC7AB8C0046DB6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD7EFFD1AC7AB8C0046DB6F /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209A219427DFE00736F1A;
+			remoteInfo = OAuth2Tests;
+		};
+		6BD7F0091AC7AB9B0046DB6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD7EFFD1AC7AB8C0046DB6F /* OAuth2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEE209461942772800736F1A;
+			remoteInfo = OAuth2;
+		};
 		6BFA8F6E1AC79C3900F1EFE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6BFA8F531AC79C3900F1EFE3 /* Project object */;
@@ -24,13 +65,39 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6BFA8F991AC7A94E00F1EFE3 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6BD7F00C1AC7ABB50046DB6F /* OAuth2.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6B322EAA1ACDDAFC00C47E32 /* Flowdock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowdock.swift; sourceTree = "<group>"; };
+		6B7B7BA01ACFC83600D03B17 /* FlowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowsViewController.swift; sourceTree = "<group>"; };
+		6B7B7BA21ACFC8C400D03B17 /* FlowsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowsView.xib; sourceTree = "<group>"; };
+		6B7B7BA41ACFCA0100D03B17 /* MainWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowViewController.swift; sourceTree = "<group>"; };
+		6B85C4E31AC7B6A4000D8C04 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		6BA754001AD4E830004288A8 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		6BA754041AD51392004288A8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6BD7EFFD1AC7AB8C0046DB6F /* OAuth2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2.xcodeproj; path = OAuth2/OAuth2.xcodeproj; sourceTree = "<group>"; };
+		6BD7F00D1AC7AD7A0046DB6F /* OAuth.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuth.xib; sourceTree = "<group>"; };
+		6BD7F00F1AC7ADBD0046DB6F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6BEA41EB1AD24527002A317B /* FlowdockAuthorisation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowdockAuthorisation.swift; sourceTree = "<group>"; };
+		6BEA41ED1AD24553002A317B /* FlowdockTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowdockTypes.swift; sourceTree = "<group>"; };
+		6BEA41EF1AD24572002A317B /* JsonConnectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonConnectionDelegate.swift; sourceTree = "<group>"; };
+		6BF17FE01AC7D2620093C1BD /* OAuthWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthWindowController.swift; sourceTree = "<group>"; };
+		6BF17FE41AC7E5CE0093C1BD /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		6BFA8F5B1AC79C3900F1EFE3 /* Flowdock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowdock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFA8F5F1AC79C3900F1EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BFA8F601AC79C3900F1EFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6BFA8F621AC79C3900F1EFE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BFA8F641AC79C3900F1EFE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6BFA8F671AC79C3900F1EFE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BFA8F6D1AC79C3900F1EFE3 /* FlowdockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowdockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFA8F721AC79C3900F1EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BFA8F731AC79C3900F1EFE3 /* FlowdockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowdockTests.swift; sourceTree = "<group>"; };
@@ -41,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD7F00B1AC7ABA40046DB6F /* OAuth2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +122,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC5BB83DDC8D6950B8AA3A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B7B7B9D1ACFC81300D03B17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B7BA01ACFC83600D03B17 /* FlowsViewController.swift */,
+				6B7B7BA21ACFC8C400D03B17 /* FlowsView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6BD7EFFE1AC7AB8C0046DB6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BD7F0041AC7AB8C0046DB6F /* OAuth2.framework */,
+				6BD7F0061AC7AB8C0046DB6F /* OAuth2.framework */,
+				6BD7F0081AC7AB8C0046DB6F /* OAuth2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BEA41E81AD2450F002A317B /* Flowdock API */ = {
+			isa = PBXGroup;
+			children = (
+				6B322EAA1ACDDAFC00C47E32 /* Flowdock.swift */,
+				6BEA41EB1AD24527002A317B /* FlowdockAuthorisation.swift */,
+				6BEA41ED1AD24553002A317B /* FlowdockTypes.swift */,
+				6BEA41EF1AD24572002A317B /* JsonConnectionDelegate.swift */,
+			);
+			name = "Flowdock API";
+			sourceTree = "<group>";
+		};
 		6BFA8F521AC79C3900F1EFE3 = {
 			isa = PBXGroup;
 			children = (
+				6BD7EFFD1AC7AB8C0046DB6F /* OAuth2.xcodeproj */,
 				6BFA8F5D1AC79C3900F1EFE3 /* Flowdock */,
 				6BFA8F701AC79C3900F1EFE3 /* FlowdockTests */,
 				6BFA8F5C1AC79C3900F1EFE3 /* Products */,
+				0BC5BB83DDC8D6950B8AA3A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,11 +182,18 @@
 		6BFA8F5D1AC79C3900F1EFE3 /* Flowdock */ = {
 			isa = PBXGroup;
 			children = (
-				6BFA8F601AC79C3900F1EFE3 /* AppDelegate.swift */,
-				6BFA8F621AC79C3900F1EFE3 /* ViewController.swift */,
+				6BEA41E81AD2450F002A317B /* Flowdock API */,
+				6B7B7B9D1ACFC81300D03B17 /* Views */,
+				6BF17FE41AC7E5CE0093C1BD /* Dispatcher.swift */,
+				6BD7F00F1AC7ADBD0046DB6F /* AppDelegate.swift */,
+				6BF17FE01AC7D2620093C1BD /* OAuthWindowController.swift */,
 				6BFA8F641AC79C3900F1EFE3 /* Images.xcassets */,
-				6BFA8F661AC79C3900F1EFE3 /* Main.storyboard */,
 				6BFA8F5E1AC79C3900F1EFE3 /* Supporting Files */,
+				6BD7F00D1AC7AD7A0046DB6F /* OAuth.xib */,
+				6B85C4E31AC7B6A4000D8C04 /* MainMenu.xib */,
+				6B7B7BA41ACFCA0100D03B17 /* MainWindowViewController.swift */,
+				6BA754001AD4E830004288A8 /* Notifications.swift */,
+				6BA754041AD51392004288A8 /* Extensions.swift */,
 			);
 			path = Flowdock;
 			sourceTree = "<group>";
@@ -119,10 +233,12 @@
 				6BFA8F571AC79C3900F1EFE3 /* Sources */,
 				6BFA8F581AC79C3900F1EFE3 /* Frameworks */,
 				6BFA8F591AC79C3900F1EFE3 /* Resources */,
+				6BFA8F991AC7A94E00F1EFE3 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6BD7F00A1AC7AB9B0046DB6F /* PBXTargetDependency */,
 			);
 			name = Flowdock;
 			productName = Flowdock;
@@ -176,6 +292,12 @@
 			mainGroup = 6BFA8F521AC79C3900F1EFE3;
 			productRefGroup = 6BFA8F5C1AC79C3900F1EFE3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6BD7EFFE1AC7AB8C0046DB6F /* Products */;
+					ProjectRef = 6BD7EFFD1AC7AB8C0046DB6F /* OAuth2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6BFA8F5A1AC79C3900F1EFE3 /* Flowdock */,
@@ -184,13 +306,39 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		6BD7F0041AC7AB8C0046DB6F /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = 6BD7F0031AC7AB8C0046DB6F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BD7F0061AC7AB8C0046DB6F /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = 6BD7F0051AC7AB8C0046DB6F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BD7F0081AC7AB8C0046DB6F /* OAuth2Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuth2Tests.xctest;
+			remoteRef = 6BD7F0071AC7AB8C0046DB6F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		6BFA8F591AC79C3900F1EFE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7B7BA31ACFC8C400D03B17 /* FlowsView.xib in Resources */,
+				6BD7F00E1AC7AD7A0046DB6F /* OAuth.xib in Resources */,
 				6BFA8F651AC79C3900F1EFE3 /* Images.xcassets in Resources */,
-				6BFA8F681AC79C3900F1EFE3 /* Main.storyboard in Resources */,
+				6B85C4E41AC7B6A4000D8C04 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +356,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BFA8F631AC79C3900F1EFE3 /* ViewController.swift in Sources */,
-				6BFA8F611AC79C3900F1EFE3 /* AppDelegate.swift in Sources */,
+				6BA754011AD4E830004288A8 /* Notifications.swift in Sources */,
+				6BD7F0101AC7ADBD0046DB6F /* AppDelegate.swift in Sources */,
+				6BEA41F01AD24572002A317B /* JsonConnectionDelegate.swift in Sources */,
+				6B7B7BA51ACFCA0100D03B17 /* MainWindowViewController.swift in Sources */,
+				6BEA41EC1AD24527002A317B /* FlowdockAuthorisation.swift in Sources */,
+				6BF17FE51AC7E5CE0093C1BD /* Dispatcher.swift in Sources */,
+				6BEA41EE1AD24553002A317B /* FlowdockTypes.swift in Sources */,
+				6B322EAB1ACDDAFC00C47E32 /* Flowdock.swift in Sources */,
+				6BF17FE11AC7D2620093C1BD /* OAuthWindowController.swift in Sources */,
+				6BA754051AD51392004288A8 /* Extensions.swift in Sources */,
+				6B7B7BA11ACFC83600D03B17 /* FlowsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,23 +381,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6BD7F00A1AC7AB9B0046DB6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2;
+			targetProxy = 6BD7F0091AC7AB9B0046DB6F /* PBXContainerItemProxy */;
+		};
 		6BFA8F6F1AC79C3900F1EFE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6BFA8F5A1AC79C3900F1EFE3 /* Flowdock */;
 			targetProxy = 6BFA8F6E1AC79C3900F1EFE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6BFA8F661AC79C3900F1EFE3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BFA8F671AC79C3900F1EFE3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6BFA8F751AC79C3900F1EFE3 /* Debug */ = {
@@ -325,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Flowdock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Flowdock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -397,6 +550,7 @@
 				6BFA8F791AC79C3900F1EFE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BFA8F7A1AC79C3900F1EFE3 /* Build configuration list for PBXNativeTarget "FlowdockTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +559,7 @@
 				6BFA8F7C1AC79C3900F1EFE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
