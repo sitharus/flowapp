@@ -30,9 +30,7 @@ class JsonConnectionDelegate : NSObject, NSURLConnectionDataDelegate {
         if let result: AnyObject = json {
             jsonRecieved(result)
         }
-        
-        NSNotificationCenter.defaultCenter()
-        .postNotificationName(Notifications.FlowdockConnectionFinished,
-            object: nil, userInfo: ["connection":connection, "delegate":self])
+        let message = FlowdockFinished(connection, delegate: self)
+        Dispatcher.globalDispatcher?.postNotification(.FlowdockConnectionFinished, notification: message)
     }
 }

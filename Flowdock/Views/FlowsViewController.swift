@@ -32,7 +32,19 @@ class FlowsViewController : NSViewController {
     
     override func awakeFromNib() {
         outlineView.expandItem(nil, expandChildren: true)
-        NSNotificationCenter.defaultCenter().postNotificationName(Notifications.RefreshFlows, object: self)
+        let d = Dispatcher.globalDispatcher!
+        d.addObserverForNotification(NotificationName.FlowsUpdated,
+            call: {[weak self] n in self?.updateFlows(n) ?? false})
+        
+        //d.postNotification(.RefreshFlows, notification: Notification())
+    }
+    
+    func updateFlows(n : Notification) -> Bool {
+        if let flows = n as? FlowsNotification {
+            outlineSource.setFlows(flows.flows)
+            outlineView.reloadData()
+        }
+        return true;
     }
     
     required init?(coder: NSCoder) {
@@ -48,23 +60,30 @@ class FlowObject : NSObject {
         self.title  = title
     }
     
-    dynamic var children : [FlowItem] {
+    var children : [FlowItem] {
         get {
             return _children
         }
     }
     
-    dynamic var isRoot : Bool {
+    var isRoot : Bool {
         return true
     }
+    
+    func setChildren(children : [FlowItem]) {
+        _children = children
+    }
+    
 }
 
 class FlowItem : FlowObject {
-    override init(title : String) {
+    let flow : Flow
+    init(title : String, flow : Flow) {
+        self.flow = flow
         super.init(title: title)
     }
     
-    override dynamic var isRoot : Bool {
+    override var isRoot : Bool {
         return false
     }
 }
@@ -72,6 +91,15 @@ class FlowItem : FlowObject {
 
 class FlowTreeDataSource : NSObject, NSOutlineViewDataSource, NSOutlineViewDelegate {
     let roots = [FlowObject(title: "Flows"), FlowObject(title: "Private")]
+    
+    @IBOutlet
+    weak var view : NSOutlineView?
+    
+    func setFlows(flows: [Flow]) {
+        let flowList = roots[0]
+        let flowItems = flows.map { FlowItem(title: $0.name, flow: $0) }
+        flowList.setChildren(flowItems)
+    }
     
     func outlineView(outlineView: NSOutlineView, numberOfChildrenOfItem item: AnyObject?) -> Int {
         if item == nil {
@@ -116,14 +144,12 @@ class FlowTreeDataSource : NSObject, NSOutlineViewDataSource, NSOutlineViewDeleg
     
     func outlineView(outlineView: NSOutlineView, objectValueForTableColumn tableColumn: NSTableColumn?, byItem item: AnyObject?) -> AnyObject? {
         if let fo = item as? FlowObject {
-            return fo.title
+            return fo
         }
         fatalError("Unknown item in outlineView objectValueForTableColumn")
     }
     
-    func outlineView(outlineView: NSOutlineView, setObjectValue object: AnyObject?, forTableColumn tableColumn: NSTableColumn?, byItem item: AnyObject?) {
-        //println(object, tableColumn, item)
-    }
+    func outlineView(outlineView: NSOutlineView, setObjectValue object: AnyObject?, forTableColumn tableColumn: NSTableColumn?, byItem item: AnyObject?) {    }
     
     func outlineView(outlineView: NSOutlineView, isGroupItem item: AnyObject) -> Bool {
         if let fo = item as? FlowObject {
@@ -137,5 +163,19 @@ class FlowTreeDataSource : NSObject, NSOutlineViewDataSource, NSOutlineViewDeleg
             return !fo.isRoot
         }
         return false
+    }
+    
+    func outlineViewSelectionDidChange(notification: NSNotification) {
+        let item : AnyObject? = view!.itemAtRow(view!.selectedRow)
+        if let i = item as? FlowItem {
+            Dispatcher.globalDispatcher?.postNotification(NotificationName.FlowSelected,
+                notification: FlowSelectedNotification(flow: i.flow))
+        }
+    }
+}
+
+class FlowSelectedNotification : Notification {
+    init (flow : Flow) {
+        
     }
 }

@@ -8,6 +8,15 @@
 
 import Foundation
 
+class FlowdockFinished : Notification {
+    let connection : NSURLConnection
+    let delegate : JsonConnectionDelegate
+    
+    init(_ connection : NSURLConnection, delegate : JsonConnectionDelegate) {
+        self.connection = connection
+        self.delegate = delegate
+    }
+}
 
 class Flowdock {
     let apiHost = NSURL(string: "https://api.flowdock.com/")!
@@ -16,16 +25,16 @@ class Flowdock {
     var connectionsInFlight : [NSURLConnection] = []
     
     init() {
-        NSNotificationCenter.defaultCenter()
-        .addObserverForName(Notifications.FlowdockConnectionFinished,
-            object: nil, queue: nil, usingBlock: removeReferences)
+        Dispatcher.globalDispatcher?
+        .addObserverForNotification(NotificationName.FlowdockConnectionFinished,
+            call: {[unowned self] n in self.removeReferences(n)})
     }
     
-    func removeReferences( n: NSNotification!) {
-        let connection = n.userInfo!["connection"] as! NSURLConnection
-        let delegate = n.userInfo!["delegate"] as! JsonConnectionDelegate
-        delegatesInFlight = delegatesInFlight.filter({n in n != delegate})
-        connectionsInFlight = connectionsInFlight.filter({n in n != connection})
+    func removeReferences(n: Notification) -> Bool {
+        let info = n as! FlowdockFinished
+        delegatesInFlight = delegatesInFlight.filter({n in n != info.delegate})
+        connectionsInFlight = connectionsInFlight.filter({n in n != info.connection})
+        return false
     }
     
     internal func flows() {
@@ -39,30 +48,47 @@ class Flowdock {
     
 }
 
+class FlowsNotification : Notification {
+    let flows : [Flow]
+    init(flows: [Flow]) {
+        self.flows = flows
+    }
+}
+
 class FlowdockFlowsDelegate : JsonConnectionDelegate {
     override func jsonRecieved(json: AnyObject) {
         if let items = json as? [AnyObject] {
+            
             let flows = items.map({ (n : AnyObject) in
                 (n as? [String : AnyObject]) >>= self.parseFlow})
+                .filter({ $0 != nil })
+                .map({ $0! })
+            Dispatcher.globalDispatcher?.postNotification(.FlowsUpdated,
+                notification: FlowsNotification(flows: flows))
             
-            println(flows)
         }
     }
     
     func parseFlow(json : [String : AnyObject]) -> Flow? {
-        let flow = mkFlow <*> string(json, "id")
-            <*> string(json, "name")
+        if  let id = string(json, "id"),
+            let name = string(json, "name"),
+            let parameterizedName = string(json, "parameterized_name"),
+            let open = bool(json, "open"),
+            let joined = bool(json, "joined"),
+            let url = string(json, "url"),
+            let webUrl = string(json, "web_url"),
+            let accessMode = string(json, "access_mode")
+        {
+            let joinUrl = string(json, "join_url")
+            let unreadMentions = int(json, "unread_mentions") ?? 0
+            
+            return Flow(id: id, name: name, parameterized_name: parameterizedName,
+                unread_mentions: unreadMentions, open: open, joined: joined,
+                url: url, web_url: webUrl, join_url: joinUrl, access_mode: accessMode)
         
-        return Optional(flow!("parameterised_name")(0)(true)(true)("test")("web")("join")("Organisation"))
-        /*mkFlow <*> string(json, "id")
-            <*> string(json, "name")
-            <*> string(json, "parameterised_name")
-            <*> number(json, "unread_mentions")
-            <*> bool(json, "open")
-            <*> bool(json, "joined")
-            <*> string(json, "url")
-            <*> string(json, "web_url")
-            <*> string(json, "access_mode")*/
+        }
+        println("Failed to load flow from \(json)")
+        return nil
     }
     
 }

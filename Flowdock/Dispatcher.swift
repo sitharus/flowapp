@@ -9,7 +9,24 @@
 import Cocoa
 import OAuth2
 
+
+class Notification {
+    
+}
+
+
 class Dispatcher {
+    static var globalDispatcher : Dispatcher?
+    static func defaultDispatcher() -> Dispatcher {
+        if globalDispatcher == nil {
+            globalDispatcher = Dispatcher()
+        }
+        return globalDispatcher!
+    }
+    
+    var notifications : [NotificationName : [Notification -> Bool]] = [:]
+    
+    
     let settings = [
         "client_id": Constants.OAuthApplication,
         "client_secret": Constants.OAuthSecret,
@@ -25,13 +42,26 @@ class Dispatcher {
     
     init () {
         flowdock = Flowdock()
-        let notifications = NSNotificationCenter.defaultCenter()
-        notifications.addObserverForName(Notifications.RefreshFlows, object: nil, queue: nil,
-            usingBlock: refreshFlows)
+        self.addObserverForNotification(.RefreshFlows,
+            call: {[unowned self] n in self.refreshFlows()})
     }
     
-    func refreshFlows(notification : NSNotification!) {
+    func refreshFlows() -> Bool {
         flowdock.flows()
+        return true
+    }
+    
+    func addObserverForNotification(notification : NotificationName, call : Notification -> Bool) {
+        if notifications[notification] == nil {
+            notifications[notification] = []
+        }
+        notifications[notification]!.append(call)
+    }
+    
+    func postNotification(name : NotificationName, notification: Notification) {
+        if let callbacks = notifications[name] {
+            notifications[name] = notifications[name]?.filter({n in n(notification)})
+        }
     }
     
     

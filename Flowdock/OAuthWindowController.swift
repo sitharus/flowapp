@@ -21,8 +21,6 @@ class OAuthWindowController : NSWindowController {
         self.dispatcher = dispatcher
         super.init(window: nil)
         NSBundle.mainBundle().loadNibNamed("OAuth", owner: self, topLevelObjects:nil)
-        NSNotificationCenter.defaultCenter()
-            .addObserverForName(Notifications.Login, object: nil, queue: nil, usingBlock: loginMessage)
     }
 
     required init?(coder: NSCoder) {

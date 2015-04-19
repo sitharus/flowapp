@@ -19,8 +19,7 @@ class MainWindowViewController : NSViewController {
         self.view.autoresizesSubviews = true;
         
         let view1 = FlowsViewController()
-        let view2 = NSViewController()
-        view2.view = NSView()
+        let view2 = MessageViewController()
         self.view.addSubview(splitViewController.view)
         
         

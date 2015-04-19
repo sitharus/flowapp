@@ -10,9 +10,11 @@ import Foundation
 
 
 
-struct Notifications {
-    static let Login = "FCNotification_Login"
-    static let RefreshFlows = "FC_RefreshFlows"
-    static let FlowdockConnectionFinished = "FC_FlowdockConnectionFinished"
+enum NotificationName {
+    case Login
+    case RefreshFlows
+    case FlowdockConnectionFinished
+    case FlowsUpdated
+    case FlowSelected
     
 }

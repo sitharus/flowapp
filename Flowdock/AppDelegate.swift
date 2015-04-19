@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet
     var mainWindowViewController : MainWindowViewController!
     
-    let dispatcher = Dispatcher()
+    let dispatcher = Dispatcher.defaultDispatcher()
     let flowdock = Flowdock()
 
 
